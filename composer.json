@@ -1,0 +1,24 @@
+{
+    "name": "bogachevskes/number-generator",
+    "description": "Генератор чисел успешных расчетов",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+      {
+        "name": "Andrey Bogachevskiy",
+        "email": "bogachevskes@yandex.ru"
+      }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "src/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.2"
+    }
+}
