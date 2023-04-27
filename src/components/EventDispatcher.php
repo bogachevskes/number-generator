@@ -13,6 +13,15 @@ class EventDispatcher
         $this->eventObservers[$event->value] = $observer;
     }
 
+    public function detach(Event $event): void
+    {
+        if (isset($this->eventObservers[$event->value]) === false) {
+            return;
+        }
+        
+        unset($this->eventObservers[$event->value]);
+    }
+
     public function trigger(Event $event, Message $message): void
     {
         if (isset($this->eventObservers[$event->value]) === false) {
